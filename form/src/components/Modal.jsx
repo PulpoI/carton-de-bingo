@@ -39,7 +39,9 @@ const Modal = ({ valuesForm, errors }) => {
                 aria-label="Close"
               />
             </div>
-            <div className="modal-body">{JSON.stringify(valuesForm)}</div>
+            <pre className="modal-body">
+              {JSON.stringify(valuesForm, null, 2)}
+            </pre>
             <div className="modal-footer">
               <button
                 type="button"
