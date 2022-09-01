@@ -64,6 +64,15 @@ function emptyPlaces() {
   row3[rows[8]] = "";
 }
 
+// Funcion para agregar el cero a numeros de 1 digito
+function addZero(row) {
+  const rowGenerate = (row[0] = `0${row[0]}`);
+  return parseInt(rowGenerate);
+}
+addZero(row1);
+addZero(row2);
+addZero(row3);
+
 emptyPlaces();
 
 document.getElementById("row-one").innerHTML = row1
@@ -75,6 +84,7 @@ document.getElementById("row-two").innerHTML = row2
 document.getElementById("row-three").innerHTML = row3
   .map((row) => `<td>${row}</td>`)
   .join("");
+
 function cambiar() {
   location.reload();
 }
